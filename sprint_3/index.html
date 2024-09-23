@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Hiroto</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav1 {
+        background-color: black;
+        padding: 10px 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .nav-desc ul li {
+        font-size: 18px;
+
+        list-style-type: none;
+        display: inline;
+        margin: 0 20px;
+    }
+
+    .nav-desc ul li button {
+        padding: 13px 20px;
+        width: 157px;
+        box-sizing: border-box;
+        height: 48px;
+        background-color: white;
+        letter-spacing: 1px;
+    }
+
+    .nav2 {
+        padding: 0 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .nav2 .nav-desc ul li {
+        font-size: 13px;
+
+        list-style-type: none;
+        display: inline;
+        margin: 0 20px;
+    }
+
+    .address ul li {
+        font-size: 13px;
+
+        list-style-type: none;
+        display: inline;
+        margin: 0 20px;
+
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    section {
+        margin-top: -20px;
+    }
+
+    .top {
+        /* background-color: black; */
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/hero.jpg");
+        height: 800px;
+    }
+
+    .h1 {
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 18px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+    }
+
+    .h2 {
+        letter-spacing: 1px;
+        line-height: 80px;
+        margin: 0;
+        font-size: 65px;
+        font-family: sans-serif;
+        font-weight: 700;
+        /* width: 800px; */
+        text-align: center;
+        color: white;
+    }
+
+    .book-ticket {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .book {
+        width: 1120px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 50px 50px;
+    }
+
+    .book label {
+        /* margin: 20px 0; */
+        color: #777c81;
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+
+    .book input,
+    select {
+        border: 1px solid rgb(234, 234, 234);
+        /* border: none; */
+        height: 48px;
+        width: 240px;
+        margin: 15px 0;
+    }
+
+    .book button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 50px;
+    }
+
+    .secound {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+    }
+
+    .secound .left {
+        float: left;
+        margin-left: 100px;
+
+    }
+
+    .secound .left .heading1 {
+        text-align: start;
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 18px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+    }
+
+    .secound .left .heading2 {
+        letter-spacing: 1px;
+        line-height: 6 0px;
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 600;
+        width: 700px;
+        /* text-align: center; */
+    }
+
+    .secound .right img {
+        /* position: absolute; */
+        margin-top: -100px;
+        margin-left: -250px;
+        float: left;
+    }
+
+    .secound .heading3,
+    .heading4 {
+        font-size: 16px;
+        font-family: sans-serif;
+        color: #777c81;
+        width: 570px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+    }
+
+    .secound .left img {
+        margin-top: 30px;
+    }
+
+    .third {
+        margin-top: 100px;
+    }
+
+    .first-row,
+    .secound-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .third .col {
+        width: 380px;
+        margin: 20px;
+    }
+
+    .third .heading1 {
+        font-size: 22px;
+        font-weight: 550;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .third .desc {
+        font-size: 16px;
+        line-height: 26px;
+        color: #777c81;
+    }
+
+    .forth .heading1 {
+        text-align: center;
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+    }
+
+    .forth .heading2 {
+        text-align: center;
+        /* line-height: 6 0px; */
+        margin-top: -20px;
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .img-gal {
+        display: flex;
+
+    }
+
+    .forth .img {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-2.jpg.webp");
+    }
+
+    .forth .img1 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/home-room/hr-1.jpg");
+    }
+
+    .forth .img2 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-4.jpg");
+    }
+
+    .forth .img3 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-2.jpg");
+    }
+
+    .img-gal .img,
+    .img1,
+    .img2,
+    .img3 {
+        height: 493px;
+        width: 368px;
+        margin: 5px;
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .fifth {
+        margin-top: 50px;
+    }
+
+    .fifth .head {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .fifth .heading1 p {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .fifth .button button {
+        background-color: #e9ad28;
+        border: none;
+        letter-spacing: 3px;
+        /* padding: 30px; */
+        font-size: 16px;
+        color: white;
+        height: 50px;
+        width: 168px;
+        align-items: center;
+
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .fifth .right {
+        float: left;
+        margin-left: 100px;
+
+    }
+
+    .fifth img {
+        margin-left: 150px;
+    }
+
+    .fifth .right .heading1 {
+        text-align: start;
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 18px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+    }
+
+    .fifth .right .heading2 {
+        letter-spacing: 1px;
+        line-height: 6 0px;
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 600;
+        width: 700px;
+        /* text-align: center; */
+    }
+
+    .fifth .heading3,
+    .heading4 {
+        font-size: 16px;
+        font-family: sans-serif;
+        color: #777c81;
+        width: 570px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+    }
+
+    .six {
+        height: 500px;
+        background-image: url("	https://preview.colorlib.com/theme/hiroto/img/chooseus-bg.jpg");
+        background-size: cover;
+        margin-top: 50px;
+
+    }
+
+    .six div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+    }
+
+    .six button {
+        background-color: white;
+        border: none;
+        letter-spacing: 3px;
+        /* padding: 30px; */
+        font-size: 16px;
+        color: black;
+        height: 50px;
+        width: 168px;
+        align-items: center;
+    }
+
+    .six .heading1 {
+        text-align: center;
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+        /* margin-bottom:50px; */
+    }
+
+    .six .heading2 {
+        text-align: center;
+        /* lineheight: 6 0px; */
+        width: 900px;
+        margin-top: -20px;
+        font-size: 38px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: white;
+        margin-bottom: -50px;
+    }
+
+    .seven {
+        margin-top: 50px;
+    }
+
+    .seven .head {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .seven .heading {
+        font-family: sans-serif;
+        font-size: 12px;
+        color: #e9ad28;
+        font-weight: 600;
+        text-align: start;
+    }
+
+    .seven .heading1 p {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .seven .button p {
+        width: 570px;
+        color: #777c81;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .seven .button button {
+        background-color: #e9ad28;
+        border: none;
+        letter-spacing: 3px;
+        /* padding: 30px; */
+        font-size: 16px;
+        color: white;
+        height: 50px;
+        width: 183px;
+        align-items: center;
+
+    }
+
+
+
+    .img-gal {
+        display: flex;
+
+    }
+
+    .seven .img {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-2.jpg.webp");
+    }
+
+    .seven .img1 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/home-room/hr-1.jpg");
+    }
+
+    .seven .img2 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-4.jpg");
+    }
+
+    .seven .img3 {
+        background-image: url("https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-2.jpg");
+    }
+
+    .seven .main {
+        margin-top: 50px;
+    }
+
+    .seven .img,
+    .img1,
+    .img2,
+    .img3 {
+        height: 493px;
+        width: 368px;
+        margin: 5px;
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .eight .heading1 {
+        text-align: center;
+        padding-top: 100px;
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #e9ad28;
+        font-weight: 600;
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+        /* margin-bottom:50px; */
+    }
+
+    .eight .heading2 {
+        text-align: center;
+        /* lineheight: 6 0px; */
+        margin-top: -20px;
+        font-size: 38px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: black;
+        margin-bottom: -50px;
+    }
+
+    .eight .main img {
+        height: 270px;
+        width: 300px;
+    }
+
+    .eight .main div {
+        height: 270px;
+        width: 300px;
+    }
+
+    .eight .main .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+    footer {
+        background-image: url("	https://preview.colorlib.com/theme/hiroto/img/footer-bg.jpg");
+    }
+
+    footer .head {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        height: 100px;
+    }
+
+    footer .body {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer .body p {
+        color: #777c81;
+    }
+    footer h3{
+        color: white;
+    }
+    footer ul li {
+        list-style-type: none;
+        margin: 10px 0;
+        color: #777c81;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    footer input{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        border: none;
+        width: 400px;
+        height: 47px;
+    }
+    footer button{
+        font-family: sans-serif;
+        font-size: 16px;
+        background-color: #e9ad28;
+        border: none;
+        color: white;
+        padding: 17px;
+        margin-left: -10px;
+        letter-spacing: 1px;
+    }
+</style>
+
+
+<!-- https://preview.colorlib.com/theme/hiroto/img/hero.jpg -->
+
+<body>
+    <nav class="nav2">
+        <div class="address">
+            <ul>
+                <li><i class="fa-solid fa-location-dot" style="color: #e9ad28;"></i> 96 Ernser Vista Suite 437, NY, US
+                </li>
+                <li><i class="fa-solid fa-phone" style="color: #e9ad28;"></i> 238-123456</li>
+            </ul>
+        </div>
+        <div class="nav-desc">
+            <ul>
+                <li>Login</li>
+                <li>Register</li>
+                <li>English</li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="nav1">
+        <div class="logo">
+            <img src="https://preview.colorlib.com/theme/hiroto/img/logo.png" alt="">
+        </div>
+        <div class="nav-desc">
+            <ul>
+                <li>Home</li>
+                <li>Rooms</li>
+                <li>About Us</li>
+                <li>Pages</li>
+                <li>News</li>
+                <li>Contact</li>
+                <li>
+                    <button>Book Now <i class="fa-solid fa-arrow-right" style="color: #e9ad28;"></i></button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="top">
+            <div class="heading">
+                <p class="h1">WELCOME HIROTO</p>
+                <p class="h2">Experience the greatest </p>
+                <p class="h2">for you holidays.</p>
+            </div>
+            <div class="book-ticket">
+                <div class="book">
+                    <div>
+                        <label for="">Location</label><br>
+                        <input type="text" placeholder="Search Loaction">
+
+                    </div>
+                    <div>
+                        <label for="">Check in </label><br>
+                        <input type="date" placeholder="Search Loaction">
+                    </div>
+                    <div>
+                        <label for="">Check ot</label><br>
+                        <input type="date" placeholder="Search Loaction">
+                    </div>
+                    <div>
+                        <label for="">Person</label><br>
+                        <select name="" id="">
+                            <option value="">2 Audlt </option>
+                            <option value="">2 Audlt </option>
+                            <option value="">2 Audlt </option>
+                        </select>
+                    </div>
+                    <div class="button">
+                        <button>
+                            BOOK NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secound">
+            <div class="left">
+                <p class="heading1">ABOUT US</p>
+                <p class="heading2">
+                    Welcome Hiroto Hotel In Street L’Abreuvoir
+                </p>
+                <p class="heading3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                    consequuntur
+                    magni dolores eos qui ratione voluptatem sequi nesciunt
+                </p>
+                <p class="heading4">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                </p>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/home-about/sign.png" alt="">
+
+            </div>
+            <div class="right">
+                <img src="https://preview.colorlib.com/theme/hiroto/img/home-about/home-about.png.webp" alt="">
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="first-row">
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-1.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-2.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-3.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+            </div>
+            <div class="secound-row">
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-3.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-5.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+                <div class="col">
+                    <img src="https://preview.colorlib.com/theme/hiroto/img/services/services-6.png" alt="">
+                    <p class="heading1">
+                        Free Wi-Fi
+                    </p>
+                    <p class="desc">The massive investment in a hotel or resort requires constant reviews and control in
+                        order to make it a successful investment.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="forth">
+            <p class="heading1">OUR ROOM</p>
+            <p class="heading2">Explore Our Hotel</p>
+            <div class="img-gal">
+                <div class="img">
+                    <p>Delux Room </p>
+                </div>
+                <div class="img1">
+                    <p>Delux Room </p>
+                </div>
+                <div class="img2">
+                    <p>Delux Room </p>
+
+                </div>
+                <div class="img3">
+                    <p>Delux Room </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="head">
+                <div class="heading1">
+                    <p>Planning your next trip? Save up to 25% on your hotel</p>
+                </div>
+                <div class="button">
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="body">
+                <div class="left">
+                    <div> <img src="https://preview.colorlib.com/theme/hiroto/img/testimonial-left.jpg" alt=""></div>
+                </div>
+                <div class="right">
+                    <p class="heading1">Testimonials</p>
+                    <p class="heading2">
+                        What do customers say about us?
+
+                    </p>
+                    <p class="heading3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium.
+                    </p>
+                    <p class="heading4">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="six">
+            <div>
+                <p class="heading1">WHY CHOOSE US</p>
+            </div>
+            <div>
+                <p class="heading2">Contact us now to get the latest deals and for the next booking</p>
+            </div>
+
+            <div class="button">
+                <button>Explore More</button>
+            </div>
+        </div>
+
+        <div class="seven">
+            <div class="head">
+
+                <div class="heading1">
+                    <p class="heading">OUR GALLERY</p>
+                    <p>Planning your next trip? Save up to 25% on your hotel</p>
+                </div>
+                <div class="button">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Sunt in culpa qui officia deserunt mollit anim.
+
+                    </p>
+                    <button>View Gallery <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="img-gal">
+                    <div class="img">
+                    </div>
+                    <div class="img1">
+                    </div>
+                    <div class="img2">
+
+                    </div>
+                    <div class="img3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="eight">
+            <p class="heading1"> NEWS & EVENT </p>
+            <p class="heading2">From Our Blog</p>
+            <div class="main">
+                <div class="col">
+                    <div>
+                        <img src="https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-2.jpg.webp" alt="">
+                    </div>
+                    <div></div>
+                    <div>
+                        <img src="https://preview.colorlib.com/theme/hiroto/img/gallery/gallery-4.jpg" alt="">
+                    </div>
+                    <div></div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="head">
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo/logo-1.png" alt="">
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo/logo-2.png" alt="">
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo/logo-2.png" alt="">
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo/logo-4.png" alt="">
+            </div>
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo/logo-5.png" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <div>
+                <img src="https://preview.colorlib.com/theme/hiroto/img/logo.png" alt="">
+                <p>(123) 123456 </p>
+                <p></p>
+                <p>Ernser Vista Suite 437, NY</p>
+                <p>Info.colorlib@gmail.com<< /p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Boking</li>
+                    <li>About Us</li>
+                    <li>Review</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Subscribe our newlatester</h3>
+                <input type="text" placeholder="Your E-mail Address">
+                <button>Subscribe</button>
+            </div>
+            <div></div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
